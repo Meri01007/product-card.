@@ -51,7 +51,9 @@ b{
   line-height: 24px;
 }
 .spanlocation{
-  margin-left: 170px;
+  display: flex;
+  justify-content: right;
+
 }
 .line{
   margin: 25px;
