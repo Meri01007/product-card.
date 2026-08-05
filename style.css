@@ -16,7 +16,7 @@ body {
 }
 
 
-h1 {
+.h1 {
   color: #515076;
   font-size: 70px;
   line-height: 78px;
@@ -33,7 +33,7 @@ h1 {
 }
 
 .product-card__photo {
-  justify-content: center;
+  text-align: center;
   margin: 20px;
 }
 
@@ -87,4 +87,12 @@ b {
   gap: 45px;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.green {
+  background-color: #55d79f52;
+}
+
+.red {
+  background-color: #db2c2c78;
 }
