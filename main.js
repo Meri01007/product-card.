@@ -51,10 +51,7 @@ function h1log (message){
 const changeColorOffButton = document.querySelector('#change-color-offbutton');
 
 changeColorOffButton.addEventListener('click', () => {
-  if (changeColorOffButton.classList.toggle('green')) {
-  } 
-  else {
-    changeColorOffButton.classList.toggle('red');
-  }
+  (changeColorOffButton.classList.toggle('green'))
+    (changeColorOffButton.classList.toggle('red'));
 });
 
