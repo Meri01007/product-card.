@@ -3,14 +3,14 @@ function forecast(city, temperature){
 }
 forecast('Гумдаг', 55);
 
-const lightSpeed = 299792458
+const LIGHT_SPEED = 299792458
 
 function checkSpeed (highSpeed){
-  if( highSpeed>lightSpeed ){
+  if ( highSpeed>LIGHT_SPEED ){
     console.log ('Сверхсветовая');
-  } else if(lightSpeed>highSpeed)
+  } else if (LIGHT_SPEED>highSpeed)
     console.log('Субсветовая скорость');
-   else (lightSpeed===lightSpeed) 
+   else (LIGHT_SPEED===LIGHT_SPEED) 
     console.log('Скорость света');}
 
     checkSpeed(299792459)
@@ -19,8 +19,8 @@ function checkSpeed (highSpeed){
     const car = 'Toyota Camry'
     const carPrice = 2500
 
-    function budget(money){
-      if(money>=carPrice){
+    function calculateBudget(money){
+      if (money>=carPrice){
         console.log(`${car} приобретён. Спасибо за покупку!`)
       } else
       {const difference = carPrice - money;{
@@ -28,14 +28,14 @@ function checkSpeed (highSpeed){
         }}
 
     }
-    budget(3000)
-    budget(2000)
+    calculateBudget(3000)
+    calculateBudget(2000)
 
 
-function meret(){
+function showMessage(){
   console.log('Функция создана для улучшения аналитических способностей дз7')
 }
-meret()
+showMessage()
 
 var meri = 'учебная переменная вар'
 let meri01 = 'учебная переменная лет'
