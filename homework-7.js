@@ -1,7 +1,7 @@
-function forecast(city, temperature){
+function showForecast(city, temperature){
   console.log( `Сейчас в ${city} температура - ${temperature} градусов по Цельсию`);
 }
-forecast('Гумдаг', 55); 
+showForecast('Гумдаг', 55); 
 
 const LIGHT_SPEED = 299792458;
 
