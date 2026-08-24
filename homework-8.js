@@ -1,4 +1,4 @@
-const showUserData = {
+const userData = {
   name: "Meret",
   surname: "Pyhyyev",
   age: 30,
@@ -8,33 +8,34 @@ const showUserData = {
   language: "Russian",
   "e-mail": "bely0102@gmail.com",
 };
-console.log(showUserData);
+console.log(userData);
 
-const showCarDetailes = {
+const carDetailes = {
   make: "Toyota",
   model: "Camry",
   year: 2025,
   color: "white",
   transmission: "automatic",
 };
+console.log(carDetailes);
 
-const showCarDetailes1 = { ...showCarDetailes, owner: showUserData };
-console.log(showCarDetailes1);
+carDetailes.owner = userData;
+console.log(carDetailes);
 
 function checkSpeed(car) {
   if ("maxspeed" in car) console.log(car.maxspeed);
   else {
     car.maxspeed = 150;
   }
-}
+};
 
-checkSpeed(showCarDetailes);
-console.log(showCarDetailes.maxspeed);
+checkSpeed(carDetailes);
+console.log(carDetailes.maxspeed);
 
-showCarDetailes.maxspeed = 200;
-console.log(showCarDetailes.maxspeed);
+carDetailes.maxspeed = 200;
+console.log(carDetailes.maxspeed);
 
-function checkValue(obj, key) {
+function checkValueObject(obj, key) {
   if (key in obj) {
     console.log(obj[key]);
   }
