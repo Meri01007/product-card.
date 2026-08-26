@@ -46,9 +46,27 @@ const products = [ "Увлажняющий мусс", "Увлажняющая м
 console.log(products);
 
 const movies = [ 
-{  title: "Прослушка",          rate: 9.3,  country: "США",             year: 1999,  genre: "Криминал, Триллер, Драма" },
-{  title: "Мятеж",              rate: 0.0,  country: "Великобритания",  year: 2026,  genre: "Криминал, Триллер, Боевик" },
-{  title: "Молодой Вашингтон",  rate: 7.5,  country: "США",             year: 2026,  genre: "Биография, История" }
+{
+  title: "Прослушка",
+  rate: 9.3,
+  country: "США",
+  year: 1999,
+  genre: "Криминал, Триллер, Драма"
+},
+{
+  title: "Мятеж",
+  rate: 0.0,
+  country: "Великобритания",
+  year: 2026,
+  genre: "Криминал, Триллер, Боевик"
+},
+{
+  title: "Молодой Вашингтон",
+  rate: 7.5,
+  country: "США",
+  year: 2026,
+  genre: "Биография, История"
+}
 ];
 
 const luckyStrike = {
@@ -64,9 +82,27 @@ movies.push(luckyStrike);
 console.log(movies);
 
 const cartoons = [ 
-{  title: "Валли",    rate: 8.4,  country: "США",  year: 2008,  genre: "Приключения, Семейный, Фантастика" },
-{  title: "Рататуй",  rate: 8.1,  country: "США",  year: 2007,  genre: "Комедия, Приключения, Семейный, Фэнтези, Драма" },
-{  title: "Ральф",    rate: 7.7,  country: "США",  year: 2012,  genre: "Комедия, Детские, Приключения, Семейный, Фэнтези" }
+{
+  title: "Валли",
+  rate: 8.4,
+  country: "США",
+  year: 2008,
+  genre: "Приключения, Семейный, Фантастика"
+},
+{
+  title: "Рататуй",
+  rate: 8.1,
+  country: "США",
+  year: 2007,
+  genre: "Комедия, Приключения, Семейный, Фэнтези, Драма"
+},
+{
+  title: "Ральф",
+  rate: 7.7,
+  country: "США",
+  year: 2012,
+  genre: "Комедия, Детские, Приключения, Семейный, Фэнтези"
+}
 ];
 
 console.log(cartoons);
