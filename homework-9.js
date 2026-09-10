@@ -1,8 +1,8 @@
+import { socialMediaComments } from "./commet.js";
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const doubleNumbers = numbers.filter((number) => number > 4);
-console.log(doubleNumbers);
-
-
+const moreThanNumberFour = numbers.filter((number) => number > 4);
+console.log(moreThanNumberFour);
 
 const movies = [
   "Прослушка",
@@ -14,8 +14,6 @@ const movies = [
 const nameMovie = movies.includes("Валли");
 console.log(nameMovie);
 
-
-
 const reverseArray = (numbers, movies) => {
   numbers.reverse();
   movies.reverse();
@@ -23,59 +21,39 @@ const reverseArray = (numbers, movies) => {
 reverseArray(numbers, movies);
 console.log(numbers, movies);
 
-
-
-import { socialMediaComments } from "./commet.js";
-const socialMediaCommentsEmails = socialMediaComments.filter(mail => mail.email.includes('.com'));
+const socialMediaCommentsEmails = socialMediaComments.filter((mail) =>
+  mail.email.includes(".com"),
+);
 console.log(socialMediaCommentsEmails);
 
+const refreshedPostIDs = socialMediaComments.filter(
+  (nameid) => (nameid.id <= 5 ? true : nameid.postId === 2),
+  (nameid) => (nameid.id > 5 ? true : nameid.postId === 1),
+);
+console.log(refreshedPostIDs);
 
-
-const postIDs = socialMediaComments.filter (nameid => nameid.id <= 5 ? true : nameid.postId ===2,
-  nameid => nameid.id > 5 ? true : nameid.postId ===1
- );
-console.log(postIDs);
-
-
-
-const onlyIdAndNames = socialMediaComments.map(userInformation => ({
+const commentNames = socialMediaComments.map((userInformation) => ({
   id: userInformation.id,
-  name: userInformation.name}));
-console.log(onlyIdAndNames);
+  name: userInformation.name,
+}));
+console.log(commentNames);
 
-
-
-
-
-const newKey = socialMediaComments.map(key => ({...key, islnvalid: '77'}));
-console.log(newKey);
-
-
-const bodyLenght = newKey.filter((comment) => { 
-  if (comment.body.length > 180) {
-    return true;
-  }
-    else {
-      return false
-    }
-  });
+const bodyLenght = socialMediaComments
+  .filter((comment) => comment.body.length > 180)
+  .map((comment) => ({ ...comment, isInvalid: true }));
 console.log(bodyLenght);
 
-
-
-const reduceArray = socialMediaComments.reduce((acc, mails) => {
+const commentEmailsByReduce = socialMediaComments.reduce((acc, mails) => {
   acc.push(mails.email);
   return acc;
 }, []);
-console.log(reduceArray);
+console.log(commentEmailsByReduce);
 
-const mapArray = socialMediaComments.map(userMail => userMail.email);
-console.log(mapArray);
+const commentEmails = socialMediaComments.map((userMail) => userMail.email);
+console.log(commentEmails);
 
+const commentEmailsString = commentEmailsByReduce.toString();
+console.log(commentEmailsString);
 
-
-const stringreduceArray = reduceArray.toString();
-console.log(stringreduceArray);
-
-const joinMapArray = mapArray.join(' - ');
-console.log(joinMapArray);
+const commentEmailsByJoin = commentEmails.join(" - ");
+console.log(commentEmailsByJoin);
