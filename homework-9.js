@@ -1,8 +1,8 @@
 import { socialMediaComments } from "./commet.js";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const moreThanNumberFour = numbers.filter((number) => number > 4);
-console.log(moreThanNumberFour);
+const filteredByFive = numbers.filter((number) => number > 4);
+console.log(filteredByFive);
 
 const movies = [
   "Прослушка",
@@ -26,10 +26,13 @@ const socialMediaCommentsEmails = socialMediaComments.filter((mail) =>
 );
 console.log(socialMediaCommentsEmails);
 
-const refreshedPostIDs = socialMediaComments.filter(
-  (nameid) => (nameid.id <= 5 ? true : nameid.postId === 2),
-  (nameid) => (nameid.id > 5 ? true : nameid.postId === 1),
-);
+const refreshedPostIDs = socialMediaComments.map((nameid) => {
+  if (nameid.id <= 5) {
+    return (nameid.postId = 2);
+  } else {
+    return (nameid.postId = 1);
+  }
+});
 console.log(refreshedPostIDs);
 
 const commentNames = socialMediaComments.map((userInformation) => ({
@@ -38,9 +41,13 @@ const commentNames = socialMediaComments.map((userInformation) => ({
 }));
 console.log(commentNames);
 
-const bodyLenght = socialMediaComments
-  .filter((comment) => comment.body.length > 180)
-  .map((comment) => ({ ...comment, isInvalid: true }));
+const bodyLenght = socialMediaComments.map((comment) => {
+  if (comment.body.length > 180) {
+    return { ...comment, isInvalid: true };
+  } else {
+    return comment;
+  }
+});
 console.log(bodyLenght);
 
 const commentEmailsByReduce = socialMediaComments.reduce((acc, mails) => {
