@@ -26,13 +26,10 @@ const socialMediaCommentsEmails = socialMediaComments.filter((mail) =>
 );
 console.log(socialMediaCommentsEmails);
 
-const refreshedPostIDs = socialMediaComments.map((nameid) => {
-  if (nameid.id <= 5) {
-    return (nameid.postId = 2);
-  } else {
-    return (nameid.postId = 1);
-  }
-});
+const refreshedPostIDs = socialMediaComments.map((comments) => ({
+  ...comments,
+  postId: comments.id <= 5 ? 2 : 1
+}));
 console.log(refreshedPostIDs);
 
 const commentNames = socialMediaComments.map((userInformation) => ({
@@ -41,14 +38,11 @@ const commentNames = socialMediaComments.map((userInformation) => ({
 }));
 console.log(commentNames);
 
-const bodyLenght = socialMediaComments.map((comment) => {
-  if (comment.body.length > 180) {
-    return { ...comment, isInvalid: true };
-  } else {
-    return comment;
-  }
-});
-console.log(bodyLenght);
+const validatedСomments = socialMediaComments.map((comment) => ({
+  ...comment,
+  isInvalid:  comment.body.length > 180 ? true : false
+}));
+console.log(validatedСomments);
 
 const commentEmailsByReduce = socialMediaComments.reduce((acc, mails) => {
   acc.push(mails.email);
