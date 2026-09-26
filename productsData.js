@@ -10,7 +10,7 @@ export const productsData = [
       "солнцезащитные компоненты",
     ],
     price: 2750,
-    imageSrc: "images/moisturizing-mousse.jpg",
+    imageSrc: "moisturizing-mousse",
   },
   {
     productCardId: 2,
@@ -19,7 +19,7 @@ export const productsData = [
     description: "Способствует удерживанию влаги в верхних слоях кожи.",
     ingredients: ["воски", "минералы", "масла"],
     price: 3500,
-    imageSrc: "images/hydrating-mask.jpg",
+    imageSrc: "hydrating-mask",
   },
   {
     productCardId: 3,
@@ -32,7 +32,7 @@ export const productsData = [
       "солнцезащитные компоненты",
     ],
     price: 1650,
-    imageSrc: "images/cleansing-gel.jpg",
+    imageSrc: "cleansing-gel",
   },
   {
     productCardId: 4,
@@ -41,7 +41,7 @@ export const productsData = [
     description: "Набор, состоящий из увлажняющего крема и маски.",
     ingredients: ["воски", "минералы", "масла"],
     price: 4750,
-    imageSrc: "images/giftbox.jpg",
+    imageSrc: "giftbox",
   },
   {
     productCardId: 5,
@@ -51,6 +51,6 @@ export const productsData = [
       "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
     ingredients: ["воски", "минералы", "масла"],
     price: 7520,
-    imageSrc: "images/giftbox-five.jpg",
+    imageSrc: "giftbox-five",
   },
 ];
