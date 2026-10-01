@@ -3,18 +3,22 @@ import { productsData } from "./productsData.js";
 const productCardTemplate = document.querySelector(".product-card__template");
 const productCardList = document.querySelector(".products");
 
-function renderProducts(array) {
+function getFilteredProducts(array) {
   const count = +prompt(
     "Сколько карточек отобразить? (Введите число от 1 до 5)",
   );
+
   let selectedProducts = [];
   if (count >= 1 && count <= 5) {
     selectedProducts = array.filter((card, index) => index < count);
+    return selectedProducts;
   } else if (count > 5) {
     alert("Есть только 5 карточек!");
-    return renderProducts(array);
+    return getFilteredProducts(array);
   }
+}
 
+function renderProducts(selectedProducts) {
   selectedProducts.forEach((card) => {
     const productCardClone = productCardTemplate.content.cloneNode(true);
     productCardClone.querySelector(".product-card__category").textContent =
@@ -23,6 +27,7 @@ function renderProducts(array) {
       card.title;
     productCardClone.querySelector(".product-card__description").textContent =
       card.description;
+
     const ingredientsList = productCardClone.querySelectorAll(
       ".product-card__ingredients li",
     );
@@ -31,6 +36,7 @@ function renderProducts(array) {
       ingredientsList[1].textContent = card.ingredients[1] || "";
       ingredientsList[2].textContent = card.ingredients[2] || "";
     }
+
     const img = productCardClone.querySelector(".product-card__photo img");
     img.src = card.imageSrc;
     img.alt = `Фото товара ${card.title}`;
@@ -40,8 +46,8 @@ function renderProducts(array) {
     productCardList.appendChild(productCardClone);
   });
 }
-
-renderProducts(productsData);
+const selectedProducts = getFilteredProducts(productsData);
+renderProducts(selectedProducts);
 
 const productTitle = productsData.reduce((acc, card) => {
   const productObject = {
