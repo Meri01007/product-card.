@@ -19,6 +19,8 @@ function getFilteredProducts(array) {
 }
 
 function renderProducts(selectedProducts) {
+      const basePath = "images/";
+    const imageExt = "jpg";
   selectedProducts.forEach((card) => {
     const productCardClone = productCardTemplate.content.cloneNode(true);
     productCardClone.querySelector(".product-card__category").textContent =
@@ -38,7 +40,7 @@ function renderProducts(selectedProducts) {
     }
 
     const img = productCardClone.querySelector(".product-card__photo img");
-    img.src = card.imageSrc;
+    img.src = `${basePath}${card.imageSrc}.${imageExt}`;
     img.alt = `Фото товара ${card.title}`;
 
     productCardClone.querySelector(".product-card__price").textContent =

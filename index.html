@@ -8,8 +8,27 @@
   <link rel="shortcut icon" href="images/cleansing-gel.jpg" type="image">
   <title>Главная страница</title>
 </head>
-
 <body>
+  
+  <header class="header">
+    <button class="header__button">КНОПКА ДЛЯ РЕГИСТРАЦИИ</button>
+  </header>
+
+  <div class="modal">
+    <form action="#" class="modal-showed">
+      <span class="modalclose">&times;</span>
+      <input class="footer__input" placeholder="Введите своё имя" name="firstname" required>
+      <input class="footer__input" placeholder="Введите свою фамилию" name="lastname" required>
+      <input class="footer__input" placeholder="Введите свою дату рождения" type="date" name="birthday" required>
+      <input class="footer__input" placeholder="Введите Логин" name="login" required>
+      <input class="footer__input" id="password" placeholder="Введите Пароль" type="password" name="password" required>
+      <input class="footer__input" id="password-check" placeholder="Повторите Пароль" type="password"
+        name="password_confirm" required>
+      <button class="footer__input" type="reset"> Сбросить </button>
+      <button class="footer__input" type="submit"> Регистрация </button>
+    </form>
+  </div>
+
   <h1 class="h1">Выбери свой продукт</h1>
   <div class="products">
     <button id="change-color-button">Изменить Цвет Одной Карточки</button>
@@ -40,116 +59,52 @@
       </div>
     </template>
   </div>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__reklama">
+        <p class="footer__description">Product Cards</p>
+        <span class="footer__regular-text">У нас самые лучшие продукты для кожи!</span>
+        <div class="footer__link">
+          <a href="https://t.me" target="_blank">
+            <img src="/images/telegram_icon.png" alt="Телеграм" width="21px" height="17.61px">
+          </a>
+          <a href="https://vk.ru/" target="_blank">
+            <img src="/images/vk_icon.png" alt="ВК" width="24px" height="14">
+          </a>
+        </div>
+      </div>
+      <div class="footer__Subscribe-link">
+        <span class="footer__Subscribe-text">Подпишись на наши акции:</span>
+        <div>
+          <form class="footer__Subscribe-form">
+            <input class="footer__input" type="email" name="email" placeholder="Введи Email...">
+            <span class="footer__Subscribe-linebetween"></span>
+            <button class="footer__Subscribe-button" type="submit"> Подписаться</button>
+          </form>
+        </div>
+      </div>
+      <nav class="footer__nav">Быстрые ссылки
+        <ul class="footer__navlist">
+          <li class="footer__navli">Главная</li>
+          <li class="footer__navli">Магазин</li>
+          <li class="footer__navli">Контакты</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__emailadress">
+      <hr class="footer__emailadress-line">
+      <p class="footer__emailadress-text">www.product-cards.com © All rights reserved</p>
+    </div>
+  </footer>
+
+
   <script src="main.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
   <script src="homework-9.js" type="module"></script>
   <script src="homework-10.js" type="module"></script>
+  <script src="homework-11.js" type="module"></script>
 </body>
 
 </html>
-
-
-
-<!-- <div class="product-card">
-          <div class="product-card__photo"><img src="images/moisturizing-mousse.jpg" alt="Фото товара Увлажняющий мусс" width="290"
-              height="245">
-          </div>
-          <div class="product-card__description-block">
-            <h3 class="product-card__category">для нормальной кожи</h3>
-            <h2 class="product-card__title">Увлажняющий мусс</h2>
-            <p class="product-card__regular-text">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
-            <span class="product-card__regular-text">Состав: </span>
-            <ul class="product-card__regular-text">
-              <li>активные натуральные комплексы</li>
-              <li>витамины С, А, РР, В И Е</li>
-              <li>солнцезащитные компоненты</li>
-            </ul>
-            <div class="product-card__price">
-              <b>Цена</b>
-              <span class="product-card__title">2 750 &#8381</span>
-            </div>
-          </div>
-        </div> -->
-
-
-<!-- <div class="product-card"> -->
-<!-- <div class="product-card__photo"><img src="images/hydrating-mask.jpg" alt="Фото товара Увлажняющая Маска" width="290"
-              height="245">
-          </div>
-          <div class="product-card__description-block">
-            <h3 class="product-card__category">для нормальной кожи</h3>
-            <h2 class="product-card__title">Увлажняющая маска</h2>
-            <p class="product-card__regular-text">Способствует удерживанию влаги в верхних слоях кожи.</p>
-            <span class="product-card__regular-text">Состав: </span>
-            <ul class="product-card__regular-text">
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-            <div class="product-card__price">
-              <b>Цена</b>
-              <span class="product-card__title">3 500 &#8381</span>
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__photo"><img src="images/cleansing-gel.jpg" alt="Фото товара Гель для умывания" width="290"
-              height="245">
-          </div>
-          <div class="product-card__description-block">
-            <h3 class="product-card__category">для нормальной кожи</h3>
-            <h2 class="product-card__title">Гель для умывания</h2>
-            <p class="product-card__regular-text">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-            <span class="product-card__regular-text">Состав: </span>
-            <ul class="product-card__regular-text">
-              <li>минералы</li>
-              <li>витамины С, А, РР, В И Е</li>
-              <li>солнцезащитные компоненты</li>
-            </ul>
-            <div class="product-card__price">
-              <b>Цена</b>
-              <span class="product-card__title">1 650 &#8381</span>
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__photo"><img src="images/giftbox.jpg" alt="Фото товара Подарочный набор номер один"
-              width="290" height="245">
-          </div>
-          <div class="product-card__description-block">
-            <h3 class="product-card__category">для нормальной кожи</h3>
-            <h2 class="product-card__title">Подарочный набор №1</h2>
-            <p class="product-card__regular-text">Набор, состоящий из увлажняющего крема и маски.</p>
-            <span class="product-card__regular-text">Состав: </span>
-            <ul class="product-card__regular-text">
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-            <div class="product-card__price">
-              <b>Цена</b>
-              <span class="product-card__title">4 750 &#8381</span>
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__photo"><img src="images/giftbox-five.jpg" alt="Фото товара Подарочный набор номер пять"
-              width="290" height="245">
-          </div>
-          <div class="product-card__description-block">
-            <h3 class="product-card__category">для нормальной кожи</h3>
-            <h2 class="product-card__title">Подарочный набор №5</h2>
-            <p class="product-card__regular-text">Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
-            <span class="product-card__regular-text">Состав: </span>
-            <ul class="product-card__regular-text">
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-            <div class="product-card__price">
-              <b>Цена</b>
-              <span class="product-card__title">7 520 &#8381</span>
-            </div>
-          </div>
-        </div> -->
