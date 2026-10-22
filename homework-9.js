@@ -28,7 +28,7 @@ console.log(socialMediaCommentsEmails);
 
 const refreshedPostIDs = socialMediaComments.map((comments) => ({
   ...comments,
-  postId: comments.id <= 5 ? 2 : 1
+  postId: comments.id <= 5 ? 2 : 1,
 }));
 console.log(refreshedPostIDs);
 
@@ -40,7 +40,7 @@ console.log(commentNames);
 
 const validatedСomments = socialMediaComments.map((comment) => ({
   ...comment,
-  isInvalid:  comment.body.length > 180 ? true : false
+  isInvalid: comment.body.length > 180 ? true : false,
 }));
 console.log(validatedСomments);
 

@@ -1,65 +1,56 @@
-import './homework-7.js';
-import './homework-8.js';
-import './homework-9.js';
-import './homework-10.js';
-import './homework-11.js';
-import './homework-12.js';
-import './Modal.js';
-import './Form.js';
+import "./homework-7.js";
+import "./homework-8.js";
+import "./homework-9.js";
+import "./homework-10.js";
+import "./homework-11.js";
+import "./homework-12.js";
+import "./Modal.js";
+import "./Form.js";
 
-// первая карточка
-const productCard = document.querySelector ('.product-card');
-const changeColorButton = document.querySelector ('#change-color-button');
-const googleURL = 'https://google.com'
-changeColorButton.addEventListener ('click',() => {
-  productCard.style.backgroundColor = '#824cb83c'
-  
-})
+const productCard = document.querySelector(".product-card");
+const changeColorButton = document.querySelector("#change-color-button");
+const googleURL = "https://google.com";
+changeColorButton.addEventListener("click", () => {
+  productCard.style.backgroundColor = "#824cb83c";
+});
 
-//все карточки 
-const productCards = document.querySelectorAll ('.product-card');
-const changeAllColorButton = document.querySelector ('#change-allcolor-button');
+const productCards = document.querySelectorAll(".product-card");
+const changeAllColorButton = document.querySelector("#change-allcolor-button");
 
-changeAllColorButton.addEventListener ('click', () => {
-  productCards.forEach ((card) => card.style.backgroundColor='#4cb88d3c')
-})
+changeAllColorButton.addEventListener("click", () => {
+  productCards.forEach((card) => (card.style.backgroundColor = "#4cb88d3c"));
+});
 
-//ссылка Гугла
-const openGoogleButton = document.querySelector('#open-google-button');
+const openGoogleButton = document.querySelector("#open-google-button");
 
-openGoogleButton.addEventListener ('click' , openGoogle);
+openGoogleButton.addEventListener("click", openGoogle);
 
-function openGoogle () {
-  const answer = confirm('ВЫ ДЕЙСТВИТЕЛЬНО ХОТИТЕ ПЕРЕЙТИ В ГУГЛ');
+function openGoogle() {
+  const answer = confirm("ВЫ ДЕЙСТВИТЕЛЬНО ХОТИТЕ ПЕРЕЙТИ В ГУГЛ");
   if (answer === true) {
-    window.open(googleURL)
+    window.open(googleURL);
   }
 }
 
-//консольлог
+const outputConsoleButton = document.querySelector("#output-console-log");
 
-const outputConsoleButton = document.querySelector ('#output-console-log');
+outputConsoleButton.addEventListener("click", () => outputConsoleLog("ДЗ #6"));
 
-outputConsoleButton.addEventListener ('click' , () => outputConsoleLog ('ДЗ #6'))
-
-function outputConsoleLog (message) {
-  alert(message)
-  console.log(message)
+function outputConsoleLog(message) {
+  alert(message);
+  console.log(message);
 }
 
+const h1 = document.querySelector(".h1");
 
-const h1 = document.querySelector('.h1');
+h1.addEventListener("mouseover", () => h1log(h1.textContent));
 
-h1.addEventListener('mouseover', () => h1log(h1.textContent))
-
-function h1log (message){
-  console.log(message)
+function h1log(message) {
+  console.log(message);
 }
 
+const changeColorOffButton = document.querySelector("#change-color-offbutton");
 
-const changeColorOffButton = document.querySelector('#change-color-offbutton');
-
-changeColorOffButton.addEventListener('click', () => {
-  (changeColorOffButton.classList.toggle('green'));
+changeColorOffButton.addEventListener("click", () => {
+  changeColorOffButton.classList.toggle("green");
 });
-

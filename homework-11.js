@@ -12,47 +12,27 @@ emailForm.addEventListener("submit", (event) => {
 
 const openModal = document.querySelector(".header__button");
 const modalWindow = document.querySelector(".modal");
-// const modalClose = document.querySelector(".modalclose");
 
-const modal = new Modal('modalid');
+const modal = new Modal("modalid");
 
 openModal.addEventListener("click", () => {
-  modal.open()
+  modal.open();
 });
 
-// openModal.addEventListener("click", () => {
-//   modalWindow.classList.add("modal_active");
-// });
-
-// modalClose.addEventListener("click", () => {
-//   modalWindow.classList.remove("modal_active");
-// });
-
 const formShow = document.querySelector(".modal-showed");
-const form = new Form('modal-form')
+const form = new Form("modal-form");
 formShow.addEventListener("submit", (pass) => {
   pass.preventDefault();
-  if (form.isValid()) { 
+  if (form.isValid()) {
     const data = form.getValues();
     data.created_on = new Date().toLocaleString();
     data.password = btoa(data.password);
-    
+
     user = data;
     console.log(user);
-     modalWindow.classList.remove("modal_active");
+    modalWindow.classList.remove("modal_active");
     form.reset();
-  // const form = pass.target;
-  // const formData = new FormData(form);
-  // const data = Object.fromEntries(formData.entries());
-  // data.created_on = new Date().toLocaleString();
-  // if (data.password !== data.password_confirm) {
-  //   alert("Пароли не совпадают");
-  // } else {
-  //   modalWindow.classList.remove("modal_active");
-  //   data.password = btoa(data.password);
-  //   user = data;
-  //   console.log(user);
-  // }
-}});
+  }
+});
 
 let user = null;
