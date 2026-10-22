@@ -1,4 +1,3 @@
-
 export const socialMediaComments = [
   {
     postId: 1,
