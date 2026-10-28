@@ -19,8 +19,8 @@ function getFilteredProducts(array) {
 }
 
 function renderProducts(selectedProducts) {
-      const basePath = "images/";
-    const imageExt = "jpg";
+  const basePath = "images/";
+  const imageExt = "jpg";
   selectedProducts.forEach((card) => {
     const productCardClone = productCardTemplate.content.cloneNode(true);
     productCardClone.querySelector(".product-card__category").textContent =
