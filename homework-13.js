@@ -20,7 +20,7 @@ class Drink {
   }
   serveDrink() {
     this.#prepairDrink();
-  }5
+  }
 }
 
 class Coffee extends Drink {
