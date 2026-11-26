@@ -8,7 +8,6 @@ const userData = {
   language: "Russian",
   "e-mail": "bely0102@gmail.com",
 };
-console.log(userData);
 
 const carDetailes = {
   make: "Toyota",
@@ -17,10 +16,8 @@ const carDetailes = {
   color: "white",
   transmission: "automatic",
 };
-console.log(carDetailes);
 
 carDetailes.owner = userData;
-console.log(carDetailes);
 
 function checkSpeed(car) {
   if ("maxspeed" in car) console.log(car.maxspeed);
@@ -30,10 +27,8 @@ function checkSpeed(car) {
 }
 
 checkSpeed(carDetailes);
-console.log(carDetailes.maxspeed);
 
 carDetailes.maxspeed = 200;
-console.log(carDetailes.maxspeed);
 
 function checkValueObject(obj, key) {
   if (key in obj) {
@@ -48,8 +43,6 @@ const products = [
   "Подарочный набор №1",
   "Подарочный набор №5",
 ];
-
-console.log(products);
 
 const movies = [
   {
@@ -85,8 +78,6 @@ const luckyStrike = {
 
 movies.push(luckyStrike);
 
-console.log(movies);
-
 const cartoons = [
   {
     title: "Валли",
@@ -111,15 +102,10 @@ const cartoons = [
   },
 ];
 
-console.log(cartoons);
-
 const allmovies = [...cartoons, ...movies];
-console.log(allmovies);
 
 const checkMovieYear = allmovies.map((movie) => {
   return {
     isRare: movie.year > 2000,
   };
 });
-
-console.log(checkMovieYear);
