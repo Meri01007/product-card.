@@ -7,6 +7,7 @@ import "./homework-12.js";
 import "./homework-13.js";
 import "./Modal.js";
 import "./Form.js";
+import "./homework-14.js";
 
 const productCard = document.querySelector(".product-card");
 const changeColorButton = document.querySelector("#change-color-button");
@@ -55,3 +56,10 @@ const changeColorOffButton = document.querySelector("#change-color-offbutton");
 changeColorOffButton.addEventListener("click", () => {
   changeColorOffButton.classList.toggle("green");
 });
+
+const registrationModal = new Modal(
+  "registration-modal",
+  "registration-button",
+  true,
+);
+const authModal = new Modal("auth-modal", "auth-button", false);
